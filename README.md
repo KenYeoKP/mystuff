@@ -1,3 +1,3 @@
-## This is my repository mystuff.github.io
+## This is my repository
 
 This repository contains my projects.
