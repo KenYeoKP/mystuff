@@ -1,3 +1,4 @@
 title: Welcome to my website
 description: Data Analytics & Visualisation
-theme: jekyll-theme-minimal
+theme: minima 
+# jekyll-theme-minimal
