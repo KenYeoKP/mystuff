@@ -1,3 +1,3 @@
 ## This is my repository
 
-This repository contains my projects.
+and this repository contains my projects.
