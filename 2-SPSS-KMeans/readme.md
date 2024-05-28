@@ -11,7 +11,6 @@ Clustering was carried out using the K-Means module in SPSS to identify clusters
 SPSS is fantastic as it allows the user to determine the size of clusters according to one’s whims and fancies. Whether each determination makes sense or not, I am not sure. So I ran the program, setting cluster sizes from 2 to 7 and results started getting meaningless as cluster sizes increased. Adopting Occam’s razor principle in problem-solving whereby when two competing analyses provide the same outcome, the simpler analytical model should be adopted. Hence, the output from the three clusters analysis was adopted.
 
 ![](kmeansoutput.png)
-
 ### Sometimes, it is the ‘not so obvious’
 We often look at the obvious, such as what pairs well together – spa and casino, spa and gym, spa and others. Then, a further look at the result revealed that most travellers did not consider a tennis court a must-have. So, what would you do with this finding?
 
