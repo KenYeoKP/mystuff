@@ -3,4 +3,5 @@ description: uncovering trends, revealing insights
 theme: minima 
 
 url: https://kenyeokp.github.io
+markdown: kramdown
 # jekyll-theme-minimal
