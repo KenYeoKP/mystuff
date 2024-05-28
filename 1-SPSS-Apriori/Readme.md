@@ -2,7 +2,7 @@
 
 ### Apriori analysis using SPSS
 
-Mock data comprising of 504 records of hotel reviews by travellers was fed into SPSS. The data includes information of travellers, their traveling periods, hotel reviews, hotel facilities.
+Mock data comprising of 504 records of hotel reviews by travellers was fed into SPSS. The data includes information of travellers, their traveling periods, hotel reviews, facilities.
 
 ![](data.png)
 
