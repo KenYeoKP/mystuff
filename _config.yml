@@ -1,6 +1,6 @@
 title: KenYeo's posts and repositories
 description: uncovering trends, revealing insights
-url: "https://kenyeokp.github.io/"
+url: "https://KenYeoKP.github.io/"
 theme: minima 
 plugins:
   - jekyll-feed
