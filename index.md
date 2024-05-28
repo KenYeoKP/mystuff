@@ -1,1 +1,1 @@
-<a style="font-weight:bold" href="https://KenYeoKP.github.io">Return to posts and repositories</a>
+<a style="font-weight:bold" href="https://KenYeoKP.github.io">Return to posts</a>
