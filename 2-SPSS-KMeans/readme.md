@@ -6,12 +6,14 @@ Mock data comprising of 504 records of hotel reviews by travellers was fed into 
 
 ![](data.png)
 
-Clustering was carried out using the K-Means module in SPSS to identify clusters or combinations of hotel facilities that were preferred by travellers. For instance, were all six facilities, namely Casino, Spa, Free internet, Gym, Pool, and Tennis court, important to travellers? If not, what combinations of facilities were important to them or was there any facility that a hotel could forego without affecting customer satisfaction? 
+Clustering was carried out using the K-Means module in SPSS to identify clusters or combinations of hotel facilities preferred by travellers. For instance, were all six facilities, namely Casino, Spa, Free internet, Gym, Pool, and Tennis court, important to travellers? If not, what combinations of facilities were important to them?
 
+SPSS is fantastic as it allows the user to determine the size of clusters according to one’s whims and fancies. Whether each determination makes sense or not, I am not sure. So I ran the program, setting cluster sizes from 2 to 7 and results started getting meaningless as cluster sizes increased. Adopting Occam’s razor principle in problem-solving whereby when two competing analyses provide the same outcome, the simpler analytical model should be adopted. Hence, the output from the three clusters analysis was adopted.
 
+![](kmeansoutput.png)
 
-![](output.png)
+### Sometimes, it is the ‘not so obvious’
+We often look at the obvious, such as what pairs well together – spa and casino, spa and gym, spa and others. Then, a further look at the result revealed that most travellers did not consider a tennis court a must-have. So, what would you do with this finding?
 
-Using Apriori can help uncover relationships between attributes by establishing the link between antecedent and consequent. One well-known example is the beer-diaper relationship uncovered by a consultant for a large supermarket. When dads were asked to grab diapers, they often picked up a six-pack of beer too! So, if you were in charge of store layout, would you place these items close to each other or far apart? We’ll leave this puzzle for another day.
 
 <a style="font-weight:bold" href="https://KenYeoKP.github.io">Return to posts and repositories</a>
