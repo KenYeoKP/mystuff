@@ -1,7 +1,7 @@
 title: KenYeo's posts and repositories
 description: uncovering trends, revealing insights
 theme: minima 
-baseurl: https://kenyeokp.github.io
-url: https://kenyeokp.github.io
-markdown: kramdown
+# baseurl: https://kenyeokp.github.io
+# url: https://kenyeokp.github.io
+# markdown: kramdown
 # jekyll-theme-minimal
