@@ -6,13 +6,13 @@ Mock data comprising of 504 records of hotel reviews by travellers was fed into 
 
 ![](data.png)
 
-Clustering was carried out using the K-Means module in SPSS to identify clusters or combinations of hotel facilities preferred by travellers. For instance, were all six facilities, namely Casino, Spa, Free internet, Gym, Pool, and Tennis court, important to travellers? If not, what combinations of facilities were important to them?
+Clustering was performed using the K-Means module in SPSS to identify combinations of hotel facilities preferred by travelers. It was aimed to determine whether all six facilities—Casino, Spa, Free Internet, Gym, Pool, and Tennis Court—were important to travelers, or if certain combinations of facilities held more significance.
 
-K-Means using SPSS is easy. It allows the user to determine the size of clusters according to one’s whims and fancies. Whether each determination makes sense or not, I am not sure. So I ran the program, setting cluster sizes from 2 to 7 and results started getting meaningless as cluster sizes increased. Adopting Occam’s razor principle in problem-solving whereby when two competing analyses provide the same outcome, the simpler analytical model should be adopted. Hence, the output from the three clusters analysis was adopted.
+SPSS excels in allowing users to easily analyze the results of different cluster sizes. However, the meaningfulness of each determination can vary. I ran the program with cluster sizes ranging from 2 to 7, and noticed that the results became less meaningful as the number of clusters increased. By applying Occam's razor—the principle that the simplest solution is often the best—I decided to use the output from the three-cluster analysis, as it provided the most interpretable and practical results.
 
 ![](kmeansoutput.png)
-### Sometimes, it is the ‘not so obvious’
-We often look at the obvious, such as what pairs well together – spa and casino, spa and gym, spa and others. Then, a further look at the result revealed that most travellers did not consider a tennis court a must-have. So, what would you do with this finding?
+### Sometimes, it is the ‘not so obvious’ insights that matter
+We often focus at the obvious combinations, such as spa and casino, spa and gym, or spa and other amenities. However, a deeper look at the results revealed that most travellers did not consider a tennis court a must-have. So, what would you do with this finding?
 
 
 <a style="font-weight:bold" href="https://KenYeoKP.github.io">Return to posts and repositories</a>
