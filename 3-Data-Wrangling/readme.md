@@ -1,4 +1,4 @@
-### exercise "SPEAK UP"
+## exercise "SPEAK UP"
 
 
 The COVID-19 pandemic revolutionised education by accelerating the adoption of digital tools, with Zoom emerging as a pivotal platform. Zoom enabled educators to conduct live lectures, facilitate interactive discussions, and maintain a sense of community despite physical distancing. This shift not only allowed for the immediate continuation of education but also paved the way for a more flexible, hybrid model of learning that is likely to persist beyond the pandemic.
