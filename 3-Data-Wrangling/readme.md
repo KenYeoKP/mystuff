@@ -30,6 +30,7 @@ An auto-generated transcript from a Zoom class looks like this:
     00:02:12.360 --> 00:02:14.280
     INSTRUCTOR: Yes, checking so okay
 
+
 ### and now we wrangle, with a Python of course
 It was my first experience with Python programming and I quickly learned that its fussiness over syntax is like having a grammar-loving parrot perched on your shoulder, constantly squawking about indentation and backslashes. But to deal with the given data format, Python is the way to go. After much wrangling, I generated a table with five columns: SNo, TimeFrom, TimeTo, RegName and Utterance. This data-driven approach ensured that all students who were actively involved in classes were measured appropriately.
 
@@ -40,10 +41,12 @@ It was my first experience with Python programming and I quickly learned that it
     4	02:04.8	    02:07.5	INSTRUCTOR	Okay we're going to take the picture.
     5	02:12.4	    02:14.3	INSTRUCTOR	Yes, checking so okay.
 
+
 ### right tool for the job
 There were some data cleaning activities to perform to get the TimeFrom and TimeTo into a time string format in milliseconds (for summing purposes later on). Although Python is capable of doing that, but using SQL makes my life easier—like using a wine opener for wine corks instead of a screwdriver.
 
 ![](SQLout.png)
+
 
 Once the time format was in order, the R program was used to plot a horizontal bar chart to show which student babbled the most in classes. I’m not sure if marks for class participation were awarded in this manner, but my work for this exercise is done here. 😎
 
