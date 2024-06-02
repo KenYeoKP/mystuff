@@ -43,7 +43,7 @@ It was my first experience with Python programming and I quickly learned that it
 ### right tool for the job
 There were some data cleaning activities to perform to get the TimeFrom and TimeTo into a time string format in milliseconds (for summing purposes later on). Although Python is capable of doing that, but using SQL makes my life easier—like using a wine opener for wine corks instead of a screwdriver.
 
-![](sqlout.png)
+![](SQLout.png)
 
 Once the time format was in order, R program was used to plot a horizontal bar chart to show which student babbled the most in classes. I’m not sure if marks for class participation were awarded in this manner, but my work for this exercise is done here.
 
