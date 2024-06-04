@@ -1,4 +1,4 @@
-## IBM K-Means
+## SPSS K-Means
 
 ### K-Means analysis using SPSS
 
