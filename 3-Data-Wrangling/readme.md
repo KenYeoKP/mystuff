@@ -33,7 +33,7 @@ An auto-generated transcript from a Zoom class looks like this:
     INSTRUCTOR: Yes, checking so okay
 
 <br />
-### and now we wrangle, with a Python of course
+### and now we wrangle, with a Python of course 
 It was my first experience with Python programming and I quickly learned that its fussiness over syntax is like having a grammar-loving parrot perched on your shoulder, constantly squawking about indentation and backslashes. But to deal with the given data format, Python is the program. After much wrangling, I generated a table with five columns: SNo, TimeFrom, TimeTo, RegName and Utterance. This data-driven approach ensured that all students who were actively involved in classes were measured appropriately.
 
     SNo	TimeFrom    TimeTo	RegName	        Utterance
@@ -44,7 +44,7 @@ It was my first experience with Python programming and I quickly learned that it
     5	02:12.4	    02:14.3	INSTRUCTOR	Yes, checking so okay.
 
 <br />
-### right tool for the job
+### right tool for the job 
 There were some data cleaning activities to perform to get the TimeFrom and TimeTo into a time string format in milliseconds (for summing purposes later on). Although Python is capable of doing that, using SQL just makes life easier—like using a wine opener for wine corks instead of a screwdriver.
 
 ![](SQLout.png)
