@@ -48,7 +48,7 @@ There were some data cleaning activities to perform to get the TimeFrom and Time
 ![](SQLout.png)
 
 
-Once the time format was in order, the R program was used to plot a horizontal bar chart to show which student babbled the most in classes. I’m not sure if marks for class participation were awarded in this manner, but my work for this exercise is done here. 😎
+Once the time format was in order, the R program was used to plot a horizontal bar chart to show which student babbled the most in classes. I’m not sure if marks for class participation were awarded in this manner, but my work for this exercise is done. 😎
 
 ![Rplot01](https://github.com/KenYeoKP/mystuff/assets/167163077/6baa5a35-4d0a-4171-a372-a20d425c030d)
 
