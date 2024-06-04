@@ -43,7 +43,7 @@ It was my first experience with Python programming and I quickly learned that it
     4	02:04.8	    02:07.5	INSTRUCTOR	Okay we're going to take the picture.
     5	02:12.4	    02:14.3	INSTRUCTOR	Yes, checking so okay.
 
-
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 ### right tool for the job
 There were some data cleaning activities to perform to get the TimeFrom and TimeTo into a time string format in milliseconds (for summing purposes later on). Although Python is capable of doing that, using SQL just makes life easier—like using a wine opener for wine corks instead of a screwdriver.
 
