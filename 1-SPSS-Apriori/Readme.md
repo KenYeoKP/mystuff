@@ -1,4 +1,4 @@
-## IBM SPSS
+## SPSS Apriori
 
 ### Apriori analysis using SPSS
 
