@@ -6,7 +6,7 @@
 
 The COVID-19 pandemic revolutionised education by accelerating the adoption of digital tools, with Zoom emerging as a pivotal platform. Zoom enabled educators to conduct live lectures, facilitate interactive discussions, and maintain a sense of community despite physical distancing. This shift not only allowed for the immediate continuation of education but also paved the way for a more flexible, hybrid model of learning that is likely to persist beyond the pandemic.
 
-Class participation in Zoom lectures has transformed traditional educational dynamics, offering both challenges and opportunities. Since speaking, debating and contributing ideas in an adult-learning environment are important to developing critical thinking and collaborative skills, it is crucial to measure the level of class participation in Zoom. So how does one determine the level of class participation of a student in a Zoom environment?
+Class participation in Zoom lectures has transformed traditional educational dynamics, offering both challenges and opportunities. Since speaking, debating and contributing ideas in an adult-learning environment are important to developing critical thinking and collaborative skills, it becomes crucial to measure the level of class participation in Zoom. So how does one determine the level of class participation of a student in a Zoom environment?
 
 An auto-generated transcript from a Zoom class looks like this:
 
@@ -50,7 +50,7 @@ There were some data cleaning activities to perform to get the TimeFrom and Time
 ![](SQLout.png)
 
 
-Once the time format was in order, the R program was used to plot a horizontal bar chart to show which student babbled the most in classes. I’m not sure if marks for class participation were awarded in this manner, but my work for this exercise is done. 😎
+Once the time format was in order, the R program was used to plot a horizontal bar chart to show which student babbled the most in class. I’m not sure if marks for class participation were awarded in this manner, but my work for this exercise is done. 😎
 
 ![Rplot01](https://github.com/KenYeoKP/mystuff/assets/167163077/6baa5a35-4d0a-4171-a372-a20d425c030d)
 
