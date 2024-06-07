@@ -3,11 +3,13 @@
 ### Apriori analysis using SPSS
 
 Mock data comprising of 504 records of hotel reviews by travellers was fed into SPSS. The data included information of travellers, their traveling periods, hotel reviews and facilities.
+<br /><br />
 
 ![](data.png)
 <br /><br />
 
 After determining the appropriate antecedent support and confidence, the program generated an output showing that travellers who were travelling as couples were more likely to seek spa facilities than other amenities or services.
+<br /><br />
 
 ![](output.png)
 <br /><br />
