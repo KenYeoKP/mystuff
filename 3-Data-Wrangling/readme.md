@@ -35,7 +35,7 @@ An auto-generated transcript from a Zoom class looks like this:
 <br />
 ### and now we wrangle, with a Python of course 
 
-It was my first experience with Python programming and I quickly learned that its fussiness over syntax is like having a grammar-loving parrot perched on your shoulder, constantly squawking about indentation and backslashes. But to deal with the given data format, Python is the program. After much wrangling, I generated a table with five columns: SNo, TimeFrom, TimeTo, RegName and Utterance. This data-driven approach ensured that all students who were actively involved in classes were measured appropriately.
+It was my first experience with Python programming and I quickly learned that its fussiness over syntax is like having a grammar-loving parrot perched on your shoulder, constantly squawking about indentation and backslashes. But to deal with the given data format above, Python is the program. After much wrangling, I generated a table with five columns: SNo, TimeFrom, TimeTo, RegName and Utterance. This data-driven approach ensured that all students who were actively involved in classes were measured appropriately.
 
     SNo	TimeFrom    TimeTo	RegName	        Utterance
     1	01:45.7	    01:46.3	INSTRUCTOR	hey.
