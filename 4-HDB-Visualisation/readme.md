@@ -29,7 +29,5 @@ A general observation for each flat type is as follows:
 ![](exec.jpeg)
 #### Executive flats: These larger units are rarely built by the HDB and thus are well sought after by families and investors. Despite being relatively old at between 35 and 45 years, executive flats continue to command high resale prices.
 
-I’ll leave it to each of you to interpret these trends, as it's tough to reach a consensus without conducting a thorough survey. Happy hunting if you're diving into the resale market!
+I’ll leave it to individuals to interpret these trends, as it's tough to reach a consensus without conducting a thorough survey. Happy hunting if you're diving into the resale market!
 
-
-Executive flats, despite their age (or remaining lease period) continue to climb
