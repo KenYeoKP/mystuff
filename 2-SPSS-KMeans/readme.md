@@ -12,7 +12,7 @@ SPSS excels in allowing users to easily analyze the results of different cluster
 
 ![](kmeansoutput.png)
 ### Sometimes, it is the ‘not so obvious’ insights that matter
-We often focus at the obvious combinations, such as spa and casino, spa and gym, or spa and other amenities. However, a deeper look at the results revealed that most travellers did not consider a tennis court a must-have. So, what would you do with this finding?
+We often focus at the obvious combinations, such as spa and casino, spa and gym, or spa and other amenities. However, a deeper look at the results revealed that most travellers did not consider a tennis court a must-have. So, how should you prioritise your business offerings with this finding?
 
 
 <a style="font-weight:bold" href="https://KenYeoKP.github.io">Return to posts and repositories</a>
