@@ -8,9 +8,10 @@ Visit data.gov.sg to obtain national dataset for exploration, it's a great place
 
 Using the R’s boxplot function, I was able to create charts showing the median resale prices of 3, 4, 5-room and executive flats. Features of a boxplot is summarised as follows:
 <br /><br />
-![](boxplot_explain.png)
 *Source: https://r-graph-gallery.com/boxplot.html*
+![](boxplot_explain.png)
 
+<br /><br />
 A general observation for each flat type is as follows:
 <br /><br />
 ![](3rm.jpeg)
