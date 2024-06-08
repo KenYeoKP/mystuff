@@ -1,4 +1,4 @@
-## Data Wrangling
+## Data Visualisation
 
 ### Uncovering trends in HDB resale market
 
