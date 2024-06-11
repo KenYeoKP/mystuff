@@ -4,7 +4,7 @@
 
 #### *A Visualisation Project*
 
-Visit data.gov.sg to obtain national dataset for exploration, it's a great place to obtain stats as from there as they are generally clean, reliable and valid. As such, there is not much of data wrangling needed, however one still needs to check to ensure the data is consistent when merging datasets from different datasets.
+Visit <a href="https://data.gov.sg/">data.gov.sg</a> to obtain national dataset for exploration, it's a great place to obtain stats as from there as they are generally clean, reliable and valid. As such, there is not much of data wrangling needed, however one still needs to check to ensure the data is consistent when merging datasets from different datasets.
 
 Using the R’s boxplot function, I was able to create charts showing the median resale prices of 3, 4, 5-room and executive flats. Features of a boxplot is summarised as follows:
 <br /><br />
