@@ -37,54 +37,54 @@ An auto-generated transcript from a Zoom class looks like this:
 
 It was my first experience with Python programming and I quickly learned that its fussiness over syntax is like having a grammar-loving parrot perched on your shoulder, constantly squawking about indentation and backslashes. But to deal with the above data format, Python is the program. After much wrangling, I generated a table with five columns: SNo, TimeFrom, TimeTo, RegName and Utterance. This data-driven approach ensured that all students who were actively involved in classes were measured appropriately.
 
-import re
-import pandas as pd
-import pymysql
-from sqlalchemy import create_engine, URL
-INIT_regex = re.compile(r'^WEBVTT\s*$')
-SNo_regex = re.compile(r'^(\d+)\s*$')
-Time_regex= re.compile(r'^(\d{2}:\d{2}:\d{2}\.\d{3}) --> (\d{2}:\d{2}:\d{2}\.\d{3})\s*$')
-NameUtt_regex = re.compile(r'^([^:]+):\s?(.*)$')
-UttOnly_regex = re.compile(r'^([^:]+)$')
-vttpath = 'captured_dialogue.vtt'
-vtt = open(vttpath)
-all_lines = vtt.readlines()
-vtt.close()
-colnames = ['SNo','TimeFrom','TimeTo','RegName','Utterance']
-df = pd.DataFrame(columns=colnames)
-lookingFor = 'INIT'
-for i,current_line in enumerate(all_lines):
-    if lookingFor == 'INIT':
-        mo = INIT_regex.search(current_line)
-        if mo != None:
-            lookingFor = 'SNo'
-        continue
-    elif lookingFor == 'SNo':
-        mo = SNo_regex.search(current_line)
-        if mo != None:
-            SNo = mo[1]
-            lookingFor = 'Time'
-    elif lookingFor == 'Time':
-        mo = Time_regex.search(current_line)
-        if mo != None:
-            TimeFrom = mo[1]
-            TimeTo = mo[2]
-            lookingFor = 'NameUtt'
-    elif lookingFor == 'NameUtt':
-        mo = NameUtt_regex.search(current_line)
-        if mo != None:
-            RegName = mo[1]
-            Utterance = mo[2]
-            previous_RegName = RegName 
-            lookingFor = 'SNo'
-        else:
-            lookingFor == 'UttOnly'
-            mo = UttOnly_regex.search(current_line)
+    import re
+    import pandas as pd
+    import pymysql
+    from sqlalchemy import create_engine, URL
+    INIT_regex = re.compile(r'^WEBVTT\s*$')
+    SNo_regex = re.compile(r'^(\d+)\s*$')
+    Time_regex= re.compile(r'^(\d{2}:\d{2}:\d{2}\.\d{3}) --> (\d{2}:\d{2}:\d{2}\.\d{3})\s*$')
+    NameUtt_regex = re.compile(r'^([^:]+):\s?(.*)$')
+    UttOnly_regex = re.compile(r'^([^:]+)$')
+    vttpath = 'captured_dialogue.vtt'
+    vtt = open(vttpath)
+    all_lines = vtt.readlines()
+    vtt.close()
+    colnames = ['SNo','TimeFrom','TimeTo','RegName','Utterance']
+    df = pd.DataFrame(columns=colnames)
+    lookingFor = 'INIT'
+    for i,current_line in enumerate(all_lines):
+        if lookingFor == 'INIT':
+            mo = INIT_regex.search(current_line)
             if mo != None:
-                RegName = previous_RegName # assign preceding speaker when there is no Regname
-                Utterance = mo[1]
                 lookingFor = 'SNo'
-        df.loc[df.size] = (SNo, TimeFrom, TimeTo, RegName, Utterance)
+            continue
+        elif lookingFor == 'SNo':
+            mo = SNo_regex.search(current_line)
+            if mo != None:
+                SNo = mo[1]
+                lookingFor = 'Time'
+        elif lookingFor == 'Time':
+            mo = Time_regex.search(current_line)
+            if mo != None:
+                TimeFrom = mo[1]
+                TimeTo = mo[2]
+                lookingFor = 'NameUtt'
+        elif lookingFor == 'NameUtt':
+            mo = NameUtt_regex.search(current_line)
+            if mo != None:
+                RegName = mo[1]
+                Utterance = mo[2]
+                previous_RegName = RegName 
+                lookingFor = 'SNo'
+            else:
+                lookingFor == 'UttOnly'
+                mo = UttOnly_regex.search(current_line)
+                if mo != None:
+                    RegName = previous_RegName # assign preceding speaker when there is no Regname
+                    Utterance = mo[1]
+                    lookingFor = 'SNo'
+            df.loc[df.size] = (SNo, TimeFrom, TimeTo, RegName, Utterance)
 
 df.reset_index(inplace=True, drop=True)
 
