@@ -37,6 +37,58 @@ An auto-generated transcript from a Zoom class looks like this:
 
 It was my first experience with Python programming and I quickly learned that its fussiness over syntax is like having a grammar-loving parrot perched on your shoulder, constantly squawking about indentation and backslashes. But to deal with the above data format, Python is the program. After much wrangling, I generated a table with five columns: SNo, TimeFrom, TimeTo, RegName and Utterance. This data-driven approach ensured that all students who were actively involved in classes were measured appropriately.
 
+import re
+import pandas as pd
+import pymysql
+from sqlalchemy import create_engine, URL
+INIT_regex = re.compile(r'^WEBVTT\s*$')
+SNo_regex = re.compile(r'^(\d+)\s*$')
+Time_regex= re.compile(r'^(\d{2}:\d{2}:\d{2}\.\d{3}) --> (\d{2}:\d{2}:\d{2}\.\d{3})\s*$')
+NameUtt_regex = re.compile(r'^([^:]+):\s?(.*)$')
+UttOnly_regex = re.compile(r'^([^:]+)$')
+vttpath = 'captured_dialogue.vtt'
+vtt = open(vttpath)
+all_lines = vtt.readlines()
+vtt.close()
+colnames = ['SNo','TimeFrom','TimeTo','RegName','Utterance']
+df = pd.DataFrame(columns=colnames)
+lookingFor = 'INIT'
+for i,current_line in enumerate(all_lines):
+    if lookingFor == 'INIT':
+        mo = INIT_regex.search(current_line)
+        if mo != None:
+            lookingFor = 'SNo'
+        continue
+    elif lookingFor == 'SNo':
+        mo = SNo_regex.search(current_line)
+        if mo != None:
+            SNo = mo[1]
+            lookingFor = 'Time'
+    elif lookingFor == 'Time':
+        mo = Time_regex.search(current_line)
+        if mo != None:
+            TimeFrom = mo[1]
+            TimeTo = mo[2]
+            lookingFor = 'NameUtt'
+    elif lookingFor == 'NameUtt':
+        mo = NameUtt_regex.search(current_line)
+        if mo != None:
+            RegName = mo[1]
+            Utterance = mo[2]
+            previous_RegName = RegName 
+            lookingFor = 'SNo'
+        else:
+            lookingFor == 'UttOnly'
+            mo = UttOnly_regex.search(current_line)
+            if mo != None:
+                RegName = previous_RegName # assign preceding speaker when there is no Regname
+                Utterance = mo[1]
+                lookingFor = 'SNo'
+        df.loc[df.size] = (SNo, TimeFrom, TimeTo, RegName, Utterance)
+
+df.reset_index(inplace=True, drop=True)
+
+<br />
     SNo	TimeFrom    TimeTo	RegName	        Utterance
     1	01:45.7	    01:46.3	INSTRUCTOR	hey.
     2	01:47.5	    01:50.4	INSTRUCTOR	Everyone knows the drill sitting on the cameras okay very good.
@@ -49,31 +101,6 @@ It was my first experience with Python programming and I quickly learned that it
 
 There were some data cleaning activities to perform to get the TimeFrom and TimeTo into a time string format in milliseconds (for summing purposes later on). Although Python is capable of doing that, using SQL just makes life easier—like using a wine opener for wine corks instead of a screwdriver.
 
-SELECT MAX(LENGTH(TimeFrom))  as max_TF,
-	   MAX(LENGTH(TimeTo))    as max_TT,
-	   MAX(LENGTH(RegName))   as max_RN,
-	   MAX(LENGTH(Utterance)) as max_Utt
-FROM vtt;
-
-CREATE TABLE IF NOT EXISTS vttclean (
-    	     SNo INT,
-        TimeFrom VARCHAR(12),
-          TimeTo VARCHAR(12),
-         RegName VARCHAR(15),
-       Utterance VARCHAR(300),
-    milliseconds INT);
-
-INSERT INTO vttclean (SNo, TimeFrom, TimeTo, RegName, Utterance, milliseconds)
-
-SELECT
-    SNo,
-    TimeFrom,
-    TimeTo,
-    RegName,
-    Utterance,
-    (TIME_TO_SEC(STR_TO_DATE(TimeTo,   '%H:%i:%s.%f')) * 1000 + RIGHT(TimeTo,   3)) -
-    (TIME_TO_SEC(STR_TO_DATE(TimeFrom, '%H:%i:%s.%f')) * 1000 + RIGHT(TimeFrom, 3)) AS milliseconds
-FROM vtt;
 <br />
 ![](SQLout.png)
 
