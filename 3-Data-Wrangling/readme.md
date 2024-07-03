@@ -37,10 +37,6 @@ An auto-generated transcript from a Zoom class looks like this:
 
 It was my first experience with Python programming and I quickly learned that its fussiness over syntax is like having a grammar-loving parrot perched on your shoulder, constantly squawking about indentation and backslashes. But to deal with the above data format, Python is the program. After much wrangling, I generated a table with five columns: SNo, TimeFrom, TimeTo, RegName and Utterance. This data-driven approach ensured that all students who were actively involved in classes were measured appropriately.
 
-    import re
-    import pandas as pd
-    import pymysql
-    from sqlalchemy import create_engine, URL
     INIT_regex = re.compile(r'^WEBVTT\s*$')
     SNo_regex = re.compile(r'^(\d+)\s*$')
     Time_regex= re.compile(r'^(\d{2}:\d{2}:\d{2}\.\d{3}) --> (\d{2}:\d{2}:\d{2}\.\d{3})\s*$')
@@ -86,7 +82,7 @@ It was my first experience with Python programming and I quickly learned that it
                     lookingFor = 'SNo'
             df.loc[df.size] = (SNo, TimeFrom, TimeTo, RegName, Utterance)
 
-df.reset_index(inplace=True, drop=True)
+    df.reset_index(inplace=True, drop=True)
 
 <br />
     SNo	TimeFrom    TimeTo	RegName	        Utterance
