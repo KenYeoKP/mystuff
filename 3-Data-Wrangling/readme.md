@@ -49,6 +49,32 @@ It was my first experience with Python programming and I quickly learned that it
 
 There were some data cleaning activities to perform to get the TimeFrom and TimeTo into a time string format in milliseconds (for summing purposes later on). Although Python is capable of doing that, using SQL just makes life easier—like using a wine opener for wine corks instead of a screwdriver.
 
+SELECT MAX(LENGTH(TimeFrom))  as max_TF,
+	   MAX(LENGTH(TimeTo))    as max_TT,
+	   MAX(LENGTH(RegName))   as max_RN,
+	   MAX(LENGTH(Utterance)) as max_Utt
+FROM vtt;
+
+CREATE TABLE IF NOT EXISTS vttclean (
+    	     SNo INT,
+        TimeFrom VARCHAR(12),
+          TimeTo VARCHAR(12),
+         RegName VARCHAR(15),
+       Utterance VARCHAR(300),
+    milliseconds INT);
+
+INSERT INTO vttclean (SNo, TimeFrom, TimeTo, RegName, Utterance, milliseconds)
+
+SELECT
+    SNo,
+    TimeFrom,
+    TimeTo,
+    RegName,
+    Utterance,
+    (TIME_TO_SEC(STR_TO_DATE(TimeTo,   '%H:%i:%s.%f')) * 1000 + RIGHT(TimeTo,   3)) -
+    (TIME_TO_SEC(STR_TO_DATE(TimeFrom, '%H:%i:%s.%f')) * 1000 + RIGHT(TimeFrom, 3)) AS milliseconds
+FROM vtt;
+<br />
 ![](SQLout.png)
 
 <br />
