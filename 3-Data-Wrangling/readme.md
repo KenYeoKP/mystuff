@@ -35,19 +35,14 @@ An auto-generated transcript from a Zoom class looks like this:
 <br />
 ### and now we wrangle, with a Python of course 
 
-It was my first experience with Python programming and I quickly learned that its fussiness over syntax is like having a grammar-loving parrot perched on your shoulder, constantly squawking about indentation and backslashes. But to deal with the above data format, Python is the program. After much wrangling, I generated a table with five columns: SNo, TimeFrom, TimeTo, RegName and Utterance. This data-driven approach ensured that all students who were actively involved in classes were measured appropriately.
+It was my first experience with Python programming and I quickly learned that its fussiness over syntax is like having a grammar-loving parrot perched on your shoulder, constantly squawking about indentation and backslashes. But to deal with the above data format, Python is the program.
 
-    INIT_regex = re.compile(r'^WEBVTT\s*$')
-    SNo_regex = re.compile(r'^(\d+)\s*$')
-    Time_regex= re.compile(r'^(\d{2}:\d{2}:\d{2}\.\d{3}) --> (\d{2}:\d{2}:\d{2}\.\d{3})\s*$')
-    NameUtt_regex = re.compile(r'^([^:]+):\s?(.*)$')
-    UttOnly_regex = re.compile(r'^([^:]+)$')
-    vttpath = 'captured_dialogue.vtt'
-    vtt = open(vttpath)
-    all_lines = vtt.readlines()
-    vtt.close()
-    colnames = ['SNo','TimeFrom','TimeTo','RegName','Utterance']
-    df = pd.DataFrame(columns=colnames)
+#### missing speakers?
+From the raw ‘vtt’ table, it was observed that fifty-two lines of the transcript did not contain a ‘RegName’. Since the duration of these utterances could affect the length of time spoken by the instructor or any of the students, the ownership of utterances with missing speakers had to be reasonably assigned. In addition, the ‘RegName’ needed to be automatically assigned by the Python program to allow it to be reusable on other ‘vtt’ files.
+
+Random samples were selected to study the preceding and succeeding utterances with missing speakers. It could be reasonably established that an utterance without a ‘RegName’ would likely come from the preceding speaker. Therefore, when a ‘NameUtt’ did not contain a ‘RegName’, the program would assign the previous ‘RegName’ to that particular line of utterance. 
+
+
     lookingFor = 'INIT'
     for i,current_line in enumerate(all_lines):
         if lookingFor == 'INIT':
@@ -84,7 +79,9 @@ It was my first experience with Python programming and I quickly learned that it
 
     df.reset_index(inplace=True, drop=True)
 
-<br />
+<br />    
+After much wrangling, I generated a table with five columns: SNo, TimeFrom, TimeTo, RegName and Utterance. This data-driven approach ensured that all students who were actively involved in classes were measured appropriately.
+
 Results from data wrangling:
 
     SNo	TimeFrom    TimeTo	RegName	        Utterance
