@@ -79,7 +79,6 @@ Random samples were selected to study the preceding and succeeding utterances wi
 
     df.reset_index(inplace=True, drop=True)
 
-<br />    
 After much wrangling, I generated a table with five columns: SNo, TimeFrom, TimeTo, RegName and Utterance. This data-driven approach ensured that all students who were actively involved in classes were measured appropriately.
 
 Results from data wrangling:
@@ -95,6 +94,21 @@ Results from data wrangling:
 ### right tool for the job 
 
 There were some data cleaning activities to perform to get the TimeFrom and TimeTo into a time string format in milliseconds (for summing purposes later on). Although Python is capable of doing that, using SQL just makes life easier—like using a wine opener for wine corks instead of a screwdriver.
+
+    CREATE TABLE IF NOT EXISTS vttclean (
+        	     SNo INT,
+            TimeFrom VARCHAR(12),
+              TimeTo VARCHAR(12),
+             RegName VARCHAR(15),
+           Utterance VARCHAR(300),
+        milliseconds INT);
+    
+    INSERT INTO vttclean (SNo, TimeFrom, TimeTo, RegName, Utterance, milliseconds)
+    SELECT
+        SNo, TimeFrom, TimeTo, RegName, Utterance,
+        (TIME_TO_SEC(STR_TO_DATE(TimeTo,   '%H:%i:%s.%f')) * 1000 + RIGHT(TimeTo,   3)) -
+        (TIME_TO_SEC(STR_TO_DATE(TimeFrom, '%H:%i:%s.%f')) * 1000 + RIGHT(TimeFrom, 3)) AS milliseconds
+    FROM vtt;
 
 <br />
 ![](SQLout.png)
