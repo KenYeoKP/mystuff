@@ -118,6 +118,33 @@ There were some data cleaning activities to perform to get the TimeFrom and Time
 
 Once the time format was in order, the R program was used to plot a horizontal bar chart to show which student babbled the most in class. I’m not sure if marks for class participation were awarded in this manner, but my work for this exercise is done. 😎
 
+    # plot visualisation
+    ggplot(filtered.d, aes(x = total.milliseconds, y = RegName, 
+                           fill = as.numeric(total.milliseconds))) +
+      geom_segment(aes(x = 0, xend = total.milliseconds, y = RegName, 
+                       yend = RegName), colour = '#B81840', size = 7) +
+      geom_point(size = 7, color = '#81B2D4') +
+      geom_point(size = 1.5) +
+      geom_vline(xintercept = 0, linetype = "solid") +
+      geom_text(aes(label = scales::comma(total.milliseconds)), 
+                position = position_stack(vjust = 1), size = 3, 
+                hjust = -0.6) + 
+      labs(x = "Air Time (milliseconds)", y = "",
+           title = "Total Airtime of Students (in milliseconds)") +
+      scale_x_continuous(breaks = seq(0, 300000, by = 50000), 
+                         labels = scales::comma, 
+                         limits = c(0,300000)) +
+      theme_minimal() +
+      guides(fill = FALSE) +
+      theme(panel.border = element_blank(),
+            plot.title = element_text(hjust = 0.5, size = 20, 
+                                      family = 'serif'),
+            panel.grid.major.y = element_blank(),
+            panel.grid.minor.y = element_blank(),
+            axis.text.y = element_text(face = 'bold', size = 12, 
+                                       family = 'serif'),
+            axis.title = element_text(family = 'serif'))
+
 ![Rplot03](https://github.com/KenYeoKP/mystuff/assets/167163077/223924cf-1faf-41d6-a972-42ebd9d08b28)
 
 <a style="font-weight:bold" href="https://KenYeoKP.github.io">Return to posts and repositories</a>
