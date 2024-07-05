@@ -12,7 +12,7 @@ Using the R’s boxplot function, I was able to create charts showing the median
 ![](boxplot_explain.png)
 
 <br /><br />
-Once the framework for the chart was established, plotting various charts became easy. Resuing codes not only streamlines coding but ensures consistency, reduces bugs, and boosts efficiency. So when coding, think of reusability and let it transform the software development into a smooth, joyful experience.
+Once the framework for the chart was established, plotting various charts became easy. Resuing codes not only streamlines coding but also ensures consistency, reduces bugs, and boosts efficiency. So when coding, think of reusability and let it transform the software development into a smooth, joyful experience.
 
     # plot for 3 room
     p3 <- ggplot(df2124.3rm, aes(x = factor(age_sold), y = resale_price)) +
