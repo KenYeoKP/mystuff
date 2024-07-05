@@ -14,30 +14,30 @@ Using the R’s boxplot function, I was able to create charts showing the median
 <br /><br />
 Once the framework for the chart was established, plotting various charts became easy. Resuing codes not only streamlines coding but ensures consistency, reduces bugs, and boosts efficiency. So when coding, think of reusability and let it transform the software development into a smooth, joyful experience.
 
-  # plot for 3 room
-  p3 <- ggplot(df2124.3rm, aes(x = factor(age_sold), y = resale_price)) +
-    geom_boxplot(color = 'orange', fill = 'white') +
-    geom_smooth(data = avg_prices.3rm, aes(x = factor(age_sold), 
-                                         y = avg_resale_price, group = 1),
-                                         color = 'blue', size = 1.3, se=FALSE) +
-    labs(title = "Resale Prices of 3-Room Flats by Age of Flats",
-         x = "Age of Flats",
-         y = "Resale Price") +
-    theme(plot.title = element_text(color = 'white', size = 18, hjust = 0.5),
-          panel.grid.minor.y = element_blank(),
-          panel.grid.major.y = element_line(color = "grey", linetype = 'dotted'),
-          panel.grid.minor.x = element_blank(),
-          panel.grid.major.x = element_line(color = "grey", linetype = 'dotted'),
-          panel.background = element_rect(fill = "black"),
-          plot.background = element_rect(fill = "black"),
-          axis.text = element_text(color = 'white'),
-          axis.title = element_text(color = 'white'),
-          legend.text = element_text(color = 'white'),
-          legend.title = element_text(color = 'white')
-    ) +
-    scale_y_continuous(breaks = seq(0, 1000000, by = 100000),
-                       labels = function(x) paste0(format(x, big.mark = ","))) +
-    scale_x_discrete(breaks = seq(5, max(df2124.3rm$age_sold), by =5))
+    # plot for 3 room
+    p3 <- ggplot(df2124.3rm, aes(x = factor(age_sold), y = resale_price)) +
+      geom_boxplot(color = 'orange', fill = 'white') +
+      geom_smooth(data = avg_prices.3rm, aes(x = factor(age_sold), 
+                                           y = avg_resale_price, group = 1),
+                                           color = 'blue', size = 1.3, se=FALSE) +
+      labs(title = "Resale Prices of 3-Room Flats by Age of Flats",
+           x = "Age of Flats",
+           y = "Resale Price") +
+      theme(plot.title = element_text(color = 'white', size = 18, hjust = 0.5),
+            panel.grid.minor.y = element_blank(),
+            panel.grid.major.y = element_line(color = "grey", linetype = 'dotted'),
+            panel.grid.minor.x = element_blank(),
+            panel.grid.major.x = element_line(color = "grey", linetype = 'dotted'),
+            panel.background = element_rect(fill = "black"),
+            plot.background = element_rect(fill = "black"),
+            axis.text = element_text(color = 'white'),
+            axis.title = element_text(color = 'white'),
+            legend.text = element_text(color = 'white'),
+            legend.title = element_text(color = 'white')
+      ) +
+      scale_y_continuous(breaks = seq(0, 1000000, by = 100000),
+                         labels = function(x) paste0(format(x, big.mark = ","))) +
+      scale_x_discrete(breaks = seq(5, max(df2124.3rm$age_sold), by =5))
 Then repeat by pulling out dataframe for the rest of the HDB types.
 
 A general observation for each flat type is as follows:
