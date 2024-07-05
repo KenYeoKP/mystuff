@@ -116,7 +116,7 @@ There were some data cleaning activities to perform to get the TimeFrom and Time
 <br />
 ### time to visualise
 
-Once the time format was in order, the R program was used to plot a horizontal bar chart to show which student babbled the most in class. I’m not sure if marks for class participation were awarded in this manner, but my work for this exercise is done. 😎
+Once the time formats were in order, the R program was used to plot a horizontal bar chart to show which student babbled the most in class. I’m not sure if marks for class participation were awarded in this manner, but my work for this exercise is done. 😎
 
     # plot visualisation
     ggplot(filtered.d, aes(x = total.milliseconds, y = RegName, 
