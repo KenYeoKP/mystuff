@@ -39,7 +39,6 @@ Once the framework for the chart was established, plotting various charts became
                          labels = function(x) paste0(format(x, big.mark = ","))) +
       scale_x_discrete(breaks = seq(5, max(df2124.3rm$age_sold), by =5))
 
-<br />
 Then repeat by pulling out the dataframe for each HDB type.
 
 A general observation for each flat type is as follows:
