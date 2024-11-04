@@ -1,4 +1,4 @@
-## A Machine Learning Project
+## Machine Learning
 
 ### Predicting Gaming Engagement Level
 
