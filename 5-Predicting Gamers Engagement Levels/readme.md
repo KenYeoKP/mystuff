@@ -12,7 +12,7 @@ The project starts with Exploratory Data Analysis (EDA) to uncover patterns with
 
 The Gradient Boosting model is superior, not only in recall, but also in all other areas, for predicting engagement levels effectively.
 
-This project is available at both my <a href="https://github.com/KenYeoKP/GamingEngagementLevels_Classification/tree/main">GitHub</a> and <a href="https://www.kaggle.com/datasets/rabieelkharoua/predict-online-gaming-behavior-dataset">kaggle</a> pages.
+This project is available at both my <a href="https://github.com/KenYeoKP/GamingEngagementLevels_Classification/tree/main">GitHub</a> and <a href="https://www.kaggle.com/code/kenyeo75/eda-gradient-boosting-92-accuracy">kaggle</a> pages.
 
 Let me know if you have any feedback, cheers...
 
